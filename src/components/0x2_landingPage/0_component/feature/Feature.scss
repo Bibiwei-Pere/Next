@@ -29,6 +29,10 @@
 		@include md{
 			width: 6rem;
 		}
+		@include sm{
+			width: 4rem;
+			height: 1.8rem;
+		}
 	}
 	div {
 		text-align: left;
@@ -38,9 +42,6 @@
 		}
 		p {
 			margin-top: 0.5rem;
-			@include md{
-				margin-top: 0;
-			}
 		}
 	}
 }

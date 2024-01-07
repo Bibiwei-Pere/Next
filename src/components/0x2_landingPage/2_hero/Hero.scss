@@ -52,6 +52,9 @@
 			@include md{
 				font-size: 1.8rem;
 			}
+			@include sm{
+				font-size: 1.5rem;
+			}
             }
             p{
                 color: $light-gray2;
@@ -70,6 +73,9 @@
 			gap: 0.5rem;
 			align-items: center;
 			margin-top: 1rem;
+			@include sm{
+				font-size: 0.812rem;
+			}
 			&:hover {
 				cursor: pointer;
 				background: transparent;
@@ -88,6 +94,10 @@
 		@include md{
 			bottom: 2rem;
 		}
+		@include sm{
+			bottom: 1rem;
+			gap: 0.5rem;
+		}
         .dot1, .dot2, .dot3 {
             width: 10px;
             height: 10px;
@@ -96,6 +106,10 @@
             display: inline-block;
             margin: 0 5px;
             opacity: 0.5;
+			@include sm{
+				width: 6px;
+				height: 6px;
+			}
             &.active {
                 background-color: $orange;
                 opacity: 1;

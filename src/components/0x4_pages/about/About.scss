@@ -22,6 +22,9 @@
 			margin-top: 0.5rem;
 		}
 	}
+	@include md{
+		padding: 0 12px;
+	}
 
     li {
         list-style: lower-greek;

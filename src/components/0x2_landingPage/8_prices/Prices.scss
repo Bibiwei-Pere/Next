@@ -10,6 +10,9 @@
 		@include md{
 			padding: 2rem 20px 6rem;
 		}
+		@include sm{
+			padding: 1.5rem 12px 5rem;
+		}
 
     .wrapper{		
         display: grid;
@@ -19,13 +22,20 @@
 			grid-template-columns: 1fr;
 			gap: 4rem;
 		}
+		@include sm{
+			grid-template-columns: 1fr;
+			gap: 2.5rem;
+		}
         div{
             display: flex;
             justify-content: right;
             align-items: center; 
-            gap: 1.5rem; 
+            gap: 1.5rem;
 			@include md{
 				justify-content: start;
+			}
+			@include md{
+				gap: .7rem;
 			}
             button{
                 padding: 0.7rem 1.4rem;
@@ -38,6 +48,10 @@
 				@include md{
 					padding: 0.5rem 1rem;
 					border: 1px solid $orange;
+				}
+				@include sm{
+					padding: 0.5rem 1rem;
+					font-size: 0.812rem;
 				}
                 &:hover{
                     background-color: transparent;
@@ -65,15 +79,15 @@
 		}
 		@include lg{
 			grid-template-columns: 30rem;
-			row-gap: 4rem;
+			row-gap: 2.5rem;
 		}
 		@include md{
 			grid-template-columns: 25rem;
-			gap: 4rem;
 		}
 		@include sm{
 			grid-template-columns: 1fr;
-			gap: 4rem;
+			row-gap: 2.5rem;
+			margin-top: 3.5rem;
 		}
 		.package {
 			padding: 2.8rem 2rem 2.5rem;
@@ -96,6 +110,11 @@
 						@include xxl{
 							left: 1rem;
 							padding: 0.5rem;
+						}
+						@include lg{
+							top: -1rem;
+							font-size: 0.7rem;
+							padding: 0.3rem;
 						}
                 }
             &:nth-child(2){
@@ -128,20 +147,31 @@
                 padding: 0 2rem;
                 h4{
                     font-size: 1.5rem;
+					@include lg{
+						font-size: 1.1rem;
+					}
                 }
                 p{
                     margin: 0 0 1.5rem;
+					@include lg{
+						margin: 0 0 1rem;
+					}
                 }
             }
 
             .amount{
                 background-color: $light-gray1;
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
                 padding: 1rem 2rem;
+				@include lg{
+					padding: 10px 2rem;
+				}
+				@include sm{
+					padding: 3px 2rem;
+				}
                 h2{
                     display: flex;
+					align-items: center;
                     gap: 3px;
                     color: $black;
                 }
@@ -157,10 +187,19 @@
                 flex-direction: column;
                 gap: 3rem;
                 padding: 2rem 1.5rem;
+				@include lg{
+					gap: 2rem;
+				}
+				@include sm{
+					gap: 1rem;
+				}
                 .box{
                     display: grid;
                     grid-template-columns: 2.5rem auto;
                     gap: 1.2rem;
+					@include lg{
+						gap: 1rem;
+					}
                     .number{
                         border-radius: 50%;
                         display: flex;
@@ -169,6 +208,10 @@
                         font-weight: bold;
                         height: 2.5rem;
                         border: 1px solid;
+						@include lg{
+							height: 2rem;
+							width: 2rem;
+						}
 
                     }
 
@@ -195,9 +238,12 @@
         text-align: center;
 					@include xxl{
 						max-width: 300px;
-						width: 100%;
+						width: 80%;
 						margin: auto;
 					}
+		@include lg{
+			padding: 0.9rem 0;
+		}
 		&:hover {
 			cursor: pointer;
 			background: $orange;

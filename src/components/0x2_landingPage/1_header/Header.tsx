@@ -67,18 +67,21 @@ const Header = () => {
 						<Hamburger />
 					</div>
 					{activeHamburger && (
-						<div
-							className={hide ? "hamburger" : "hide"}
-							onClick={() => {
-								setActiveHamburger(false);
-								setHide(false);
-							}}
-						>
-							<Close />
-						</div>
-					)}
-					{activeHamburger && (
 						<div className="menuContents">
+							<span>
+								<Logo />
+								{activeHamburger && (
+									<div
+										className={hide ? "hamburger" : "hide"}
+										onClick={() => {
+											setActiveHamburger(false);
+											setHide(false);
+										}}
+									>
+										<Close />
+									</div>
+								)}
+							</span>
 							<div className="centerMenu">
 								<ul>
 									<li>

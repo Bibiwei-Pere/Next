@@ -17,6 +17,9 @@
 	@include md{
 		padding: 0 20px 3rem;
 	}
+	@include sm{
+		padding: 0 12px 3rem;
+	}
 
 	.centre_text{
 		max-width: 800px;

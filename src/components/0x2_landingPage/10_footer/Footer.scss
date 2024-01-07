@@ -27,7 +27,8 @@
 		gap: 1rem;
 	}
 	@include sm{
-		padding: 3rem 20px;
+		grid-template-columns: 1fr;
+		padding: 3rem 12px;
 		gap: 1rem;
 	}
 
@@ -61,7 +62,7 @@
 		}
 		@include sm{
 			align-items: start;
-			justify-content: start;
+			justify-content: space-evenly;
 			gap: 3rem;
 			margin-bottom: 3rem;
 		}

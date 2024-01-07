@@ -10,6 +10,16 @@
 	display: grid;
 	grid-template-columns: auto 30rem;
 	gap: 7rem;
+	@include xl{
+		grid-template-columns: 1fr;
+		gap: 4rem;
+		h2{
+			margin-bottom: 1.5rem;
+		}
+		p{
+			margin-top: 0;
+		}
+	}
 	@include md{
 		grid-template-columns: 1fr;
 		padding: 0 20px;
@@ -21,6 +31,9 @@
 		p{
 			margin-top: 0;
 		}
+	}
+	@include sm{
+		padding: 0 12px;
 	}
 
 	.btn {

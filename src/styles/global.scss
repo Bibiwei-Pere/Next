@@ -18,6 +18,10 @@ h2 {
 	font-size: 2rem;
 	line-height: 2.5rem;
 	}
+	@include sm{
+	font-size: 1.5rem;
+	line-height: 2rem;
+	}
 }
 h3 {
 	font-size: 2rem;
@@ -29,6 +33,10 @@ h3 {
 h4 {
 	font-size: 1.2rem;
 	line-height: 2.8125rem;
+	@include sm{
+		font-size: 0.9rem;
+		line-height: 1.5rem;
+	}
 }
 p {
 	line-height: 1.5rem;
@@ -38,6 +46,10 @@ p {
 	@include md{
 	display: flex;
 	align-items: center;
+	}
+	@include sm{
+		font-size: 0.85rem;
+		line-height: 1.2rem;
 	}
 	/*
 	lg: '1rem', // 15px

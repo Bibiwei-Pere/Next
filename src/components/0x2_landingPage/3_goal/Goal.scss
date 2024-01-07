@@ -13,6 +13,10 @@
 		padding: 0 20px;
 		margin-top: 4rem;
 	}
+	@include sm{
+		padding: 0 12px;
+		margin-top: 3rem;
+	}
     h2{
         margin-bottom: 1rem;
         max-width: 31rem;
@@ -70,6 +74,11 @@
 			margin-top: 0;
 		}
 	}
+	@include sm{
+		h2{
+		margin-top: 0;
+		}
+	}
 .trading {
 	position: relative;
 	display: grid;
@@ -115,8 +124,13 @@
 				gap: 0rem;
 				padding: 0;
 				h4{
-					line-height: 1.5rem;
 					margin: 1rem 0;
+				}
+			}
+			@include sm{
+				padding: 0;
+				h4{
+					margin: 1rem 0 0.5rem;
 				}
 			}
 			.icon {
@@ -129,6 +143,13 @@
                 border-radius: 50%;
 				.MuiSvgIcon-root {
 					color: $white;
+				}
+				@include sm{
+					height: 2.3rem;
+					width: 2.3rem;
+					.MuiSvgIcon-root{
+						font-size: 1.5rem;
+					}
 				}
 			}
 		}
