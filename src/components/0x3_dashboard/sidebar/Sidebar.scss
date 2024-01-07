@@ -1,0 +1,142 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.sidebar {
+    margin-top: 1rem;
+    width: 100%;
+	position: relative;
+	min-height: 100vh;
+	@include md{
+		min-height: auto;
+		position: fixed;
+		justify-content: space-between;
+		align-items: center;
+		background-color: $black;
+		bottom: 0;
+		margin: 0;
+		z-index: 20;
+		padding: 10px 16px;
+	}
+	@include sm{
+		position: fixed;
+		background-color: $white;
+		border-top: 1px solid $light-gray2;
+		padding: 0;
+	}
+
+    .logo{
+        color: $white;
+        margin: 0 1rem 2rem;
+        justify-content: start;
+		@include lg{
+			h4{
+				display: none;
+			}
+		}
+		@include md{
+			display: none;
+		}
+    }
+    .container{
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		@include md{
+		display: grid;
+		grid-template-columns: repeat(5, 6rem);
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+		width: 100%;
+		}
+		@include sm{
+		grid-template-columns: repeat(5, auto);
+		justify-content: space-between;
+		gap: 0;
+		.title{
+			font-size: 0.75rem;
+		}
+		}
+    .item {
+        display: flex;
+		align-items: center;
+		justify-content: center;
+        gap: 10px;
+        margin-bottom: 2rem;
+		@include md{
+			margin-bottom: 0;
+			gap: 0;
+		}
+                
+        .wrapper{
+                display: flex;
+                gap: 0.5rem;
+                align-items: center;
+                justify-content: center;
+	        	color: $white;
+				padding: 0.5rem 0 0.5rem 1.5rem;
+				@include md{
+					padding: 0 5px 5px;
+					flex-direction: column;	
+				}
+				@include sm{
+					color: $dark-blue;
+				}
+                &:hover {
+                        color: $orange;
+		}
+            
+		.title {
+			@include lg {
+				display: none;
+		}
+			@include md {
+				display: block;
+		}
+		}
+        }
+	}
+        .item.active{
+                border-left: 3px solid $cream;
+				background-color: $dark;
+				border-radius: 4px;
+                padding: 4px;
+				@include md{
+                	border-bottom: 3px solid $cream;
+					border-left: none;
+				}
+				@include sm{
+                	border-top: 3px solid $dark-blue;
+                	border-bottom: none;
+					background-color: $white;
+					border-left: none;
+					border-radius: 0;
+				}
+                .wrapper{
+                        color: $orange;
+
+                }
+                }
+	}
+				
+        .logout{
+                position: absolute;
+                bottom: 2rem;
+                display: flex;
+                align-items: center;
+				padding: 0.5rem 0 0.5rem 1.5rem;
+                gap: 0.5rem;
+                color: $white;
+				@include lg{
+					.title{
+						display: none;
+					}
+				}
+				@include md{
+					display: none;
+				}
+                &:hover {
+                        color: $orange;
+		}
+        }
+}

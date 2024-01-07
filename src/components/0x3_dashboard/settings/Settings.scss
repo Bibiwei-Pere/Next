@@ -1,0 +1,137 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.settings{
+	.setting{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+		justify-content: center;
+		@include sm{
+			grid-template-columns: 1fr;
+			margin-bottom: 5rem;
+			h4{
+					overflow: scroll;
+			}
+		}
+		.box{
+			border-radius: 10px;
+			display: flex;
+			flex-direction: column;
+			border: 1px solid $light-gray2;
+			&:nth-child(1){
+				grid-column: span 1;
+				grid-row: span 2;
+			}
+			&:nth-child(3){
+				grid-column: span 1;
+				grid-row: span 2;
+			}
+			span{
+				display: flex;
+				justify-content: space-between;
+				background-color: $light-gray;
+				padding: 0.5rem 2rem;
+				@include sm{
+					flex-direction: column;
+				}
+			}
+
+			.wrapper{
+				padding: 2rem;
+				@include sm{
+					padding: 20px;
+				}
+				img{
+					width: 6rem;
+					height: 6rem;
+					border-radius: 50%;
+				}
+				.primary{
+					background: $cream;
+					font-weight: bold;
+					color: $orange;
+					width: 5rem;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					border-radius: 10px;
+					padding: 10px;
+				}
+
+				.sub_wrapper2{
+					display: flex;
+					justify-content: end;
+					margin-top: 1.3rem;
+						button{
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							border: 1px solid $orange;
+							color: $orange;
+							background: $cream;
+							gap: 5px;
+							height: 2.2rem;
+							padding: 0 0.8rem 0 0.6rem;
+							border-radius: 10rem;
+							font-weight: bold;
+							font-size: 1rem;
+							cursor: pointer;
+							&:hover{
+								border: 1px solid $dark-blue;
+								color: $dark-blue;
+							}
+				}
+				}
+				.sub_wrapper{
+					display: flex;
+					flex-direction: column;
+					gap: 2rem;
+					margin-top: 1rem;
+					div{
+						display: flex;
+						align-items: start;
+						justify-content: space-between;
+					flex-wrap: wrap;
+						gap: 2rem;
+						@include sm{
+							display: block;
+							max-width: 300px;
+						}
+
+						span{
+							display: flex;
+							gap: 0.5rem;
+							flex-direction: column;
+							padding: 0;
+							background: transparent;
+							p{
+							margin: 0;
+							}
+							h4{
+							line-height: 1rem;
+							}
+						}
+							.dots{
+								@include sm{
+									display: none;
+								}
+							}
+
+						input{
+							outline: none;
+							border: none;
+							background-color: $dark-blue;
+							color: $white;
+							padding: 5px 10px;
+							position: relative;
+							font-size: 1.2rem;
+						}
+					}
+				}
+			}
+	
+		}
+	}
+	
+}

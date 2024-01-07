@@ -1,0 +1,39 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.dashboard {
+	font-family: "Inter", sans-serif;
+	background: linear-gradient(90deg, $light-gray 50%, $white -100%);
+	color: $dark-blue;
+	max-width: 2000px;
+	width: 100%;
+	margin: auto;
+}
+
+.container {
+	display: flex;
+	@include md {
+		flex-direction: column-reverse;
+	}
+}
+
+.menuContainer {
+	width: 250px;
+        background: $black;
+        padding: 0;
+
+	@include lg {
+		width: max-content;
+	}
+}
+
+.contentContainer {
+	padding: 1.5rem 30px;
+	width: 100%;
+	@include md {
+		padding: 16px;
+	}
+}
+.content{
+	margin-top: 5rem;
+}

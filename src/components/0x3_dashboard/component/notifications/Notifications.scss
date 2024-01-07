@@ -1,0 +1,63 @@
+@import "../../../../styles/variables.scss";
+
+.notifications{
+	position: absolute;
+	background-color: $white;
+	box-shadow: 2px 12px 20px 2px $gray;
+	border-radius: 10px;
+	z-index: 10;
+	top: 3rem;
+	right: 0;
+	padding: 10px 1.5rem 1.5rem;
+	max-width: 400px;
+	width: 100%;
+	.close{
+		border-radius: 0.4rem;
+		display: flex;
+		justify-content: center;
+		cursor: pointer;
+	}
+	.flex{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.container{
+		display: flex;
+		flex-direction: column;
+		.wrapper{
+			display: flex;
+			gap: 1.5rem;
+			border-bottom: 1px dashed $black;
+			align-items: start;
+			padding: 15px 10px;
+			button{
+				color: $red-bg;
+				background-color: transparent;
+				border: none;
+				outline: none;
+				cursor: pointer;
+			}
+			p{
+				margin: 0;
+			}
+			span{
+				.title{
+					padding: 3px 5px;
+					border-radius: 3px;
+					font-weight: bold;
+					color: $white;
+				}
+				h5{
+					font-size: 1rem;
+					margin: 10px 0 4px;
+				}
+				.admin{
+					margin-top: 10px;
+					color: $orange;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}

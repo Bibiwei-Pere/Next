@@ -1,0 +1,99 @@
+@import "../../../../styles/responsive.scss";
+@import "../../../../styles/variables.scss";
+
+.navbar {
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+    margin-bottom: 2rem;
+	position: relative;
+	@include md{
+		position: fixed;
+		background-color: $white;
+		top: 0;
+		left: 0;
+		right: 0;
+		padding: 20px 16px 10px;
+		width: auto;
+		z-index: 20;
+	}
+
+	.logo_container{
+		display: none;
+		@include md{
+			display: block;
+		}
+	}
+	.user_container{
+		display: block;
+		@include md{
+			display: none;
+		}
+	}
+
+	.icons {
+		display: flex;
+		padding-top: 5px;
+		align-items: center;
+		gap: 20px;
+		@include md{
+			.search{
+				display: none;
+			}
+		}
+		.notification {
+			position: relative;
+
+			span {
+				background-color: $red-bg;
+				color: $white;
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				position: absolute;
+				top: -8px;
+				right: -8px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 12px;
+			}
+
+			.arrow{
+				position: absolute;
+				color: $black;
+			}
+		}
+
+		.user {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			@include md{
+				span{
+					display: none;
+				}
+			}
+
+			img {
+				width: 26px;
+				height: 26px;
+				border-radius: 50%;
+				object-fit: cover;
+			}
+		}
+		.logout{
+			display: none;
+			@include md{
+				display: block;
+			}
+		}
+		.settings{
+			display: block;
+			@include md{
+				display: none;
+			}
+		}
+	}
+}

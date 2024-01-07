@@ -1,0 +1,138 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.goals{
+	max-width: 2000px;
+	width: 100%;
+	margin: auto;
+	padding: 0 5rem;
+    margin-top: 7rem;
+	overflow-x: hidden;
+	position: relative;
+	@include md{
+		padding: 0 20px;
+		margin-top: 4rem;
+	}
+    h2{
+        margin-bottom: 1rem;
+        max-width: 31rem;
+        width: 100%;
+    }
+    
+	img {
+		position: absolute;
+		z-index: -1;
+        transform: rotate(180deg);
+		left: -20rem;
+	}
+.goal {
+	display: grid;
+	grid-template-columns: auto 36rem;
+	gap: 7rem;
+	position: relative;
+	@include xl {
+		grid-template-columns: auto 28rem;
+		gap: 5rem;
+	}
+	@include lg {
+		grid-template-columns: auto 22rem;
+		gap: 3rem;
+	}
+	@include md {
+		grid-template-columns: auto;
+		gap: 1rem;
+		.feature{
+			max-width: 500px;
+			width: 100%;
+			margin: auto;
+		}
+	}
+	@include sm {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+		.feature{
+			max-width: 100%;
+			margin: auto;
+		}
+	}
+}
+
+.tradings{
+	margin: 2rem 0rem;
+	padding: 2rem 0 0;
+	position: relative;
+	@include md {
+		margin: 0 0 1rem;
+		h2{
+			margin: 1rem 0 2rem;
+		}
+		p{
+			margin-top: 0;
+		}
+	}
+.trading {
+	position: relative;
+	display: grid;
+	grid-template-columns: 38rem auto;
+	gap: 7rem;
+	@include xl{
+		grid-template-columns: auto 25rem;
+		gap: 5rem;
+		
+	}
+	@include lg{
+		grid-template-columns: 18rem auto;
+		gap: 4rem;
+	}
+	@include md{
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+
+	.container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+		@include md{
+			max-width: 500px;
+			margin: auto;
+		}
+
+		.wrapper {
+			display: grid;
+			gap: 1.5rem;
+            padding: 1rem 0;
+            border-bottom: 2px dashed $orange;
+            &:nth-child(5), &:nth-child(6){
+                border-bottom: 2px dashed $white;
+            }
+			
+				h4{
+					line-height: 1.6rem;
+					margin: 1rem 0;
+				}
+			@include md{
+				gap: 0rem;
+				padding: 0;
+				h4{
+					line-height: 1.5rem;
+					margin: 1rem 0;
+				}
+			}
+			.icon {
+				height: 3rem;
+                width: 3rem;
+				display: flex;
+				align-items: center;
+                justify-content: center;
+                background: $gradient2;
+                border-radius: 50%;
+				.MuiSvgIcon-root {
+					color: $white;
+				}
+			}
+		}
+	}
+}
+}
+}

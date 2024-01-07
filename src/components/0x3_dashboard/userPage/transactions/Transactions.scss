@@ -1,0 +1,35 @@
+@import "../../../../styles/variables.scss";
+
+.transactions {
+	.dataGrid {
+		background: $white;
+		margin-top: 1rem;
+		padding: 20px;
+
+		.MuiDataGrid-toolbarContainer {
+			flex-direction: row-reverse;
+		}
+		.MuiDataGrid-columnHeadersInner{
+			text-transform: uppercase;
+			font-family: "Be Vietnam Pro", "sans-serif";
+		}
+
+		img {
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+			object-fit: cover;
+		}
+
+		.action {
+			display: flex;
+			gap: 15px;
+
+			img {
+				width: 20px;
+				height: 20px;
+				cursor: pointer;
+			}
+		}
+	}
+}

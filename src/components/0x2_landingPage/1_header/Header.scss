@@ -1,0 +1,162 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.header {
+	max-width: 2000px;
+	width: 100%;
+	margin: auto;
+	color: $white;
+	display: grid;
+	grid-template-columns: 6rem auto 14rem;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 5rem 0.4rem;
+	background: transparent;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+	@include lg{
+		display: none;
+	}
+    &.scroll {
+	background-color: $white;
+	color: $black;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+	.centerMenu {
+		display: flex;
+		flex: 1;
+		font-size: 15px;
+		ul {
+			display: flex;
+			gap: 3rem;
+			list-style: none;
+			li {
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	.buttons {
+			height: 38px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		.btn {
+			border: 2px solid $orange;
+			font-size: 0.9rem;
+			border-radius: 7px;
+			padding: 7px 12px;
+			background: transparent;
+			&:first-child {
+				margin-right: 35px;
+				&:hover {
+					cursor: pointer;
+					background: $orange;
+					color: $white;
+				}
+			}
+			&:last-child {
+				background: $orange;
+				color: $white;
+
+				&:hover {
+					cursor: pointer;
+					background: transparent;
+				}
+			}
+		}
+	}
+}
+
+.mobile_menu{
+	position: fixed;
+	display: none;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 10;
+	width: 100%;
+	color: $white;
+	padding: 10px 20px;
+	@include lg{
+		display: flex;
+	}
+    &.scroll {
+	background-color: $white;
+	color: $black;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	.menuContents{
+		background-color: $white;
+	}
+}
+	.hamburger{
+		display: flex;
+		align-items: center;
+		.MuiSvgIcon-root{
+			font-size: 2rem;
+		}
+	}
+
+	.menuContents{
+		position: absolute;
+		top: 4rem;
+		right: 0;
+		left: 0;
+		background-color: $black;
+		width: 100%;
+		padding: 2rem 0;
+	.centerMenu {
+		ul {
+			display: flex;
+			flex-direction: column;
+			margin: 1rem;
+			padding: 12px;
+			gap: 2rem;
+			list-style: none;
+			li {
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	.buttons {
+			height: 38px;
+			display: flex;
+			margin: 2rem;
+		.btn {
+			border: 2px solid $orange;
+			font-size: 0.9rem;
+			border-radius: 7px;
+			padding: 7px 12px;
+			background: transparent;
+			&:first-child {
+				margin-right: 20px;
+				&:hover {
+					cursor: pointer;
+					background: $orange;
+					color: $white;
+				}
+			}
+			&:last-child {
+				background: $orange;
+				color: $white;
+
+				&:hover {
+					cursor: pointer;
+					background: transparent;
+				}
+			}
+		}
+	}
+	}
+	.hide{
+		display: none;
+	}
+}

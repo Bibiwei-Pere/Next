@@ -1,0 +1,100 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.register {
+	.modal {
+        .wrapper{
+            h2{
+                max-width: 16rem;
+	            font-size: 2rem;
+	            line-height: 2.8125rem;
+                margin: auto;
+				@include sm{
+					font-size: 1.6rem;
+					text-align: center;
+				}
+            }
+        
+            form {
+                .login_item {
+				display: grid;
+                gap: 3rem;
+                width: 27rem;
+                grid-template-columns: repeat(1, 100%) !important;
+				@include md{
+					width: 20rem;
+				}
+				@include sm{
+					width: 100%;
+				}
+                div {
+                    position: relative;
+                    input {
+                        width: 100%;
+                        font-size: 1.2rem;
+                        padding: 10px;
+                        color: $black;
+                        display: block;
+                        outline: none;
+                        border: 2px solid $gray;
+                        border-radius: 5px;
+                        &:focus{
+                            //border-bottom: 2.5px solid $dark-blue;
+                        }
+                        &.filled {
+                            + label {
+                                transform: translateY(-2rem);
+                                font-size: 0.85rem;
+                                left: 0px;
+                                }
+                            }
+                        }
+                        label {
+                            position: absolute;
+                            top: 10px;
+                            left: 10px;
+                            color: $gray;
+                            font-size: 1rem;
+                            transition: all 0.2s ease-out;
+                            pointer-events: none;
+                        }
+                        span{
+                            position: absolute;
+                            right: 3px;
+                            top: 3px;
+                            bottom: 3px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background: $white;
+                            width: 2.5rem;
+                            // .MuiSvgIcon-root{
+                            //     color: $white;
+                            // }
+                        }
+                    }
+
+			}
+                .item {
+                div {
+                    input {
+                        width: 100%;
+                        }
+                    }
+			}
+
+            .checkbox {
+                display: flex;
+                justify-content: space-between;
+				@include sm{
+					flex-direction: column;
+					gap: 1rem;
+				}
+                    p{
+                        margin: 0;
+                    }
+            }
+		}
+        }
+	}
+}

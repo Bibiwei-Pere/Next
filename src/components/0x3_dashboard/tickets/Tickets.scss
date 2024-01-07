@@ -1,0 +1,80 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.tickets{
+	.container{
+		margin-top: 2rem;
+		display: grid;
+		grid-template-columns: 600px auto;
+		gap: 7rem;
+		@include sm{
+			grid-template-columns: auto;
+		}
+		form {
+			.ticket_item {
+				display: grid;
+                gap: 3rem;
+                grid-template-columns: repeat(1, 100%) !important;
+                div {
+                    position: relative;
+                    input, textarea {
+						height: auto;
+                        width: 100%;
+                        font-size: 1.2rem;
+                        padding: 10px;
+                        color: $black;
+                        display: block;
+                        outline: none;
+                        border: 2px solid $gray;
+                        border-radius: 5px;
+                        &.filled {
+                            + label {
+                                transform: translateY(-2rem);
+                                font-size: 0.85rem;
+                                left: 0px;
+                                }
+                            }
+                        }
+                        label {
+                            position: absolute;
+                            top: 14px;
+                            left: 10px;
+                            color: $gray;
+                            font-size: 1rem;
+                            transition: all 0.2s ease-out;
+                            pointer-events: none;
+                        }
+                        span{
+                            position: absolute;
+                            right: 3px;
+                            top: 10px;
+                            bottom: 3px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: start;
+                            background: $white;
+                            width: 2.5rem;
+                        }
+                    }
+
+			}
+			button{
+				margin-top: 2rem;
+				padding: 0.8rem 1rem;
+				background-color: $orange;
+				color: $white;
+				font-weight: bold;
+				border-radius: 5px;
+				border: none;
+				&:hover{
+					background-color: $orange-hover;
+				}
+			}
+		}
+		.faq{
+			@include xl{
+				display: none;
+			}
+		}
+	}
+}

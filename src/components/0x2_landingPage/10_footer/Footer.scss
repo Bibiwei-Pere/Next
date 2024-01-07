@@ -1,0 +1,140 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.footers {
+	background-color: $black;
+	.footer{
+	max-width: 2000px;
+	width: 100%;
+	margin: auto;
+	padding: 5rem;
+	display: grid;
+	grid-template-columns: 6.1rem auto 20rem;
+	gap: 5rem;
+	position: relative;
+	color: $white;
+	@include xl{
+		gap: 2rem;
+	}
+	@include lg{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@include md{
+		padding: 3rem 20px;
+		grid-template-columns: auto;
+		align-items: start;
+		justify-content: center;
+		gap: 1rem;
+	}
+	@include sm{
+		padding: 3rem 20px;
+		gap: 1rem;
+	}
+
+	.logo {
+		height: 4rem;
+		@include lg{
+			display: none;
+		}
+		@include md{
+			display: flex;
+			align-items: start;
+		}
+		@include sm{
+			justify-content: start;
+		}
+		h4 {
+			line-height: 1.2rem;
+			font-size: 2rem;
+		}
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+
+	.centerMenu {
+		display: flex;
+		justify-content: space-evenly;
+		@include md{
+			align-items: start;
+			gap: 3rem;
+			margin-bottom: 2rem;
+		}
+		@include sm{
+			align-items: start;
+			justify-content: start;
+			gap: 3rem;
+			margin-bottom: 3rem;
+		}
+		.link:hover {
+			color: $orange;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			gap: 1.3rem;
+		}
+	}
+
+	.socials {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		span {
+			display: flex;
+			position: relative;
+			align-items: center;
+			input {
+				padding: 1rem 1rem;
+				outline: none;
+				border: none;
+				border-radius: 1rem;
+				width: 100%;
+			}
+			.icon {
+				position: absolute;
+				right: 0;
+				height: 100%;
+				width: 40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: $red-bg;
+			}
+			.icon:hover {
+				cursor: pointer;
+				background-color: $orange;
+			}
+		}
+		.wrapper {
+			display: flex;
+			justify-content: space-between;
+			@include lg{
+				justify-content: start;
+				gap: 1.5rem;
+			}
+			@include md{
+				justify-content: center;
+				gap: 1.5rem;
+			}
+			.link {
+				border: 2px solid $white;
+				padding: 0.3rem;
+				display: flex;
+				align-items: center;
+				border-radius: 50%;
+			}
+			.link:hover {
+				border: 2px solid $orange;
+			}
+		}
+		p {
+			font-size: 0.8rem;
+			margin: 0;
+			@include md{
+			justify-content: center;
+			}
+		}
+	}
+	}
+}

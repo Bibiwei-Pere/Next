@@ -1,0 +1,46 @@
+@import "../../../../styles/variables.scss";
+@import "../../../../styles/responsive.scss";
+
+.features {
+	display: flex;
+	gap: 2rem;
+	position: relative;
+	text-align: center;
+	@include md{
+		gap: 1rem;
+	}
+
+	.visible {
+		position: absolute;
+		height: 1px;
+		width: 100%;
+	}
+	span {
+		background: $gradient;
+		height: 2.2rem;
+		width: 5rem;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $white;
+		font-weight: 700;
+		margin-top: 0.3rem;
+		@include md{
+			width: 6rem;
+		}
+	}
+	div {
+		text-align: left;
+		margin-bottom: 2rem;
+		@include md{
+			margin-bottom: 0;
+		}
+		p {
+			margin-top: 0.5rem;
+			@include md{
+				margin-top: 0;
+			}
+		}
+	}
+}

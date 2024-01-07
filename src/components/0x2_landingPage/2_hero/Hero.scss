@@ -1,0 +1,105 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.hero {
+	max-width: 2000px;
+	width: 100%;
+	margin: auto;
+	height: 45rem;
+	overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+	@include md{
+		height: 30rem;
+		margin: 0;
+		padding: 0;
+	}
+
+    img{
+        width: 100%;
+        height: 45rem;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+	@include md{
+		height: 30rem;
+	}
+    }
+
+    .headings{
+        height: 100%;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5rem;
+		@include md{
+			padding: 0 12px;
+		}
+
+        .text{
+            display: flex;
+            flex-direction: column;
+            max-width: 31rem;
+			width: 100%;
+            width: 100%;
+            span{
+                font-size: 2.5rem;
+			@include md{
+				font-size: 1.8rem;
+			}
+            }
+            p{
+                color: $light-gray2;
+            }
+        }
+
+        .btn {
+            position: absolute;
+			border: 2px solid $orange;
+			font-size: 1rem;
+			border-radius: 7px;
+			padding: 7px 15px;
+			background: $orange;
+			color: $white;
+			display: flex;
+			gap: 0.5rem;
+			align-items: center;
+			margin-top: 1rem;
+			&:hover {
+				cursor: pointer;
+				background: transparent;
+			}
+		}
+    }
+
+    .dots{
+        display: flex;
+        position: absolute;
+        gap: 1.5rem;
+        right: 0;
+        bottom: 5rem;
+        width: 100%;
+        justify-content: center;
+		@include md{
+			bottom: 2rem;
+		}
+        .dot1, .dot2, .dot3 {
+            width: 10px;
+            height: 10px;
+            background-color: $cream;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 5px;
+            opacity: 0.5;
+            &.active {
+                background-color: $orange;
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+@import "../../../styles/variables.scss";
+
+.testimonial {		
+	max-width: 2000px;
+	width: 100%;
+	margin: auto;
+	position: relative;
+
+	h2 {
+		position: absolute;
+		width: 100%;
+		text-align: center;
+	}
+    .carousel{
+        display: flex;
+        margin: auto;
+        gap: 3rem;
+        overflow: hidden;
+        
+	.slider {
+		margin-top: 10rem;
+		display: flex;
+		gap: 3rem;
+        animation: scrollX 30s linear infinite;
+
+		div {
+			background-color: $light-gray;
+			width: 30rem;
+			padding: 2rem;
+			.image {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				img {
+					position: absolute;
+					bottom: 11.3rem;
+					width: 4rem;
+					margin: auto;
+					height: 4rem;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+    }
+}
+
+@keyframes scrollX {
+  from {
+    left: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

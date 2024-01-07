@@ -1,0 +1,56 @@
+@import "./variables.scss";
+@import "./responsive.scss";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Be Vietnam Pro", "sans-serif";
+}
+h1 {
+	font-size: 3.5rem;
+	line-height: 4rem;
+}
+h2 {
+	font-size: 2.5rem;
+	line-height: 3.125rem;
+	@include md{
+	font-size: 2rem;
+	line-height: 2.5rem;
+	}
+}
+h3 {
+	font-size: 2rem;
+	line-height: 2.8125rem;
+	@include md{
+	line-height: 2rem;
+	}
+}
+h4 {
+	font-size: 1.2rem;
+	line-height: 2.8125rem;
+}
+p {
+	line-height: 1.5rem;
+	color: $hero-color;
+	margin: 1rem 0;
+	font-size: 1rem;
+	@include md{
+	display: flex;
+	align-items: center;
+	}
+	/*
+	lg: '1rem', // 15px
+      md: '0.9375rem', // 15px
+      sm: '0.8125rem' // 13px
+	  */
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}

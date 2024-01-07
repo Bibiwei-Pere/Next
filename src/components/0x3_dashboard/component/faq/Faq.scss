@@ -1,0 +1,42 @@
+@import "../../../../styles/variables.scss";
+@import "../../../../styles/responsive.scss";
+
+.faq {
+  max-width: 600px;
+  @include xxl{
+	max-width: 420px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+	gap: 1rem;
+	div{
+		&.active{
+			p{
+				display: block;
+			}
+			img{
+				transform: rotate(180deg);
+			}
+		}
+    span {
+      display: flex;
+      justify-content: space-between;
+	  align-items: center;
+	  gap: 2.5rem;
+	  h4{
+		line-height: 1.5rem;
+	  }
+	  cursor: pointer;
+      img {
+        width: 18px;
+        height: 14px;
+      }
+    }
+    p {
+      display: none;
+    }
+
+	}
+  }
+}

@@ -1,0 +1,165 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.user_container{
+	display: none;
+	@include md{
+		display: block;
+		margin-bottom: 1.5rem;
+	}
+	@include sm{
+		color: $hero-color;
+		h3{
+		font-size: 1.5rem;
+		color: $dark-blue;
+		}
+	}
+}
+.userPage {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: minmax(180px, auto);
+	grid-auto-flow: dense;
+
+	@include xl {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	@include lg {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@include md {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	@include sm {
+		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: auto;
+	}
+
+	.container {
+		padding: 20px;
+		border-radius: 10px;
+		max-width: 100%;
+        border: 1px solid $light-gray2;
+		background-color: $white;
+		@include sm {
+			border: none;
+			padding: 12px;
+			width: 100%;
+			.dots{
+				display: none;
+			}
+		}
+		.title {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		h4{
+				font-weight: 200;
+				font-size: 1rem;
+                line-height: 1rem;
+				text-transform: uppercase;
+				@include sm{
+					line-height: 0;
+					color: $hero-color;
+					text-transform: capitalize;
+					font-size: 1.1rem;
+				}
+            }
+
+                span{
+                        text-transform: uppercase;
+                        font-weight: bold;
+                }
+		.walletBalance {
+	width: 100%;
+	display: flex;
+	height: 100%;
+	color: $dark-blue;
+
+	.boxInfo {
+		flex: 3;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@include sm {
+			flex-direction: column-reverse;
+			justify-content: start;
+			padding: 0;
+			h4{
+				line-height: 1rem;
+			}
+		}
+
+		h1 {
+			font-size: 30px;
+			@include md {
+				font-size: 25px;
+			}
+		}
+		.btn {
+			@include sm {
+				display: none;
+			}
+		}
+	}
+}
+	}
+
+	.container1 {
+        background: $black;
+		color: $white;
+		grid-column: span 3;
+		grid-row: span 2;
+		@include sm{
+		display: none;
+		}
+	}
+	.container2 {
+        background: $light-gray;
+		grid-column: span 1;
+		grid-row: span 1;
+		@include sm{
+			grid-row: 1;
+		}
+	}
+	.container3 {
+		grid-column: span 1;
+		grid-row: span 1;
+		@include xl{
+			grid-row: 4;
+		}
+		@include sm{
+			grid-row: 1;
+		}
+	}
+	.container4 {
+		grid-column: span 1;
+		grid-row: span 1;
+		@include xl {
+			grid-column: span 2;
+			grid-row: span 2;
+		}
+		@include sm {
+			display: none;
+		}
+	}
+	.container5 {
+		grid-column: span 3;
+		grid-row: span 1;
+		overflow-x: scroll;
+		@include md {
+			display: none;
+		}
+	}
+	.container6 {
+		display: none;
+		@include sm {
+			grid-column: span 2;
+			grid-row: span 2;
+			display: block;
+		}
+	}
+}

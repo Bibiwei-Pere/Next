@@ -1,0 +1,230 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.register {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../../0x1_assets//landingPageImg/bg1.jpg");
+	//background: linear-gradient(90deg, $dark-blue 50%, $orange -100%);
+	font-family: "Be Vietnam Pro", "sans-serif";
+	//background-color: rgba(0, 0, 0, 0.724);
+    
+    .container {
+        margin: 5rem 5rem;
+		@include md{
+			margin: 4rem 1rem;
+		}
+		@include sm{
+			margin: 3rem 17px;
+		}
+    }
+
+	.modal {
+        border-radius: 0.5rem;
+		position: relative;
+        padding: 3rem 5rem;
+        display: flex;
+        flex-direction: column;
+        margin: 0.7rem;
+        gap: 3rem;
+	    background: linear-gradient(90deg, $white 50%, $light-gray -100%);
+        @include xxl{
+			padding: 3rem;
+		}        
+		@include md{
+			padding: 2rem;
+			width: 100%;
+		}    
+		@include sm{
+			padding: 2rem 1rem;
+			margin: 0;
+		}
+        .wrapper{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8rem;
+			@include xxl{
+				gap: 6rem;
+			}
+			@include xl{
+				grid-template-columns: 1fr;
+			}
+
+            .lottie{
+                display: flex;
+                flex-direction: column;
+                gap: 5rem;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+				@include xl{
+					display: none;
+				}
+                span {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+                svg{
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                }
+            }
+            
+            h3{
+                max-width: 13rem;
+                width: 100%;
+                margin: 0 0 1rem !important;
+            }
+        
+            form {
+                margin-top: 4rem;
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+            
+                .item {
+				display: grid;
+                grid-template-columns: repeat(2, auto);
+                gap: 3rem;
+				@include xxl{
+					column-gap: 1.6rem;
+				}
+				@include lg{
+					column-gap: 1rem;
+				}
+				@include md{
+					grid-template-columns: repeat(1, 1fr);
+				}
+				@include md{
+					gap: 2.5rem;
+				}
+
+                div {
+                    position: relative;
+                    input {
+                        font-size: 1.2rem;
+                        padding: 10px;
+                        color: $black;
+                        display: block;
+                        outline: none;
+                        border: 2px solid $gray;
+                        border-radius: 5px;
+                        &:focus{
+                            //border-bottom: 2.5px solid $dark-blue;
+                        }
+                        &.filled {
+                            + label {
+                                transform: translateY(-2rem);
+                                font-size: 0.85rem;
+                                left: 0px;
+                                }
+                            }
+                        }
+                        label {
+                            position: absolute;
+                            top: 13px;
+                            left: 10px;
+                            color: $gray;
+                            font-size: 1rem;
+                            transition: all 0.2s ease-out;
+                            pointer-events: none;
+                        }
+                        span{
+                            position: absolute;
+                            right: 3px;
+                            top: 3px;
+                            bottom: 3px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background: $white;
+                            width: 2.5rem;
+                            // .MuiSvgIcon-root{
+                            //     color: $white;
+                            // }
+                        }
+                    }
+
+			}
+
+            .checkbox {
+                label{
+                    display: flex;
+                    margin: 0;
+                    gap: 0.5rem;
+                    cursor: pointer;
+                    p{
+                        margin: 0;
+						@include md{
+							
+						display: flex;
+						flex-direction: column;
+						align-items: start;	
+						}
+                    }
+                    input {
+                        appearance: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        width: 20px;
+                        height: 20px;
+                        border: 2px solid $dark-blue; /* Replace #000 with your preferred color */
+                        border-radius: 3px;
+                        outline: none;
+                        transition: border-color 0.3s;
+                        cursor: pointer;
+                        &::before {
+                            content: "";
+                            display: block;
+                            width: 13px;
+                            height: 13px;
+                            margin: 2px;
+                            background-color: $dark-blue; /* Replace #000 with your preferred color */
+                            border-radius: 2px;
+                            transition: background-color 0.3s;
+                            opacity: 0;
+                        }
+                        &:checked {
+                            content: "";
+                        }
+                        &:checked::before {
+                            opacity: 1;
+                        }
+                    }
+            }
+            }
+
+			button {
+				width: 100%;
+                border: none;
+				padding: 1rem 0;
+                border-radius: 0.5rem;
+                color: $white;
+                font-size: 1.2rem;
+                font-weight: bold;
+                letter-spacing: 1px;
+                background-color: $orange;
+				cursor: pointer;
+                &:hover{
+                    background: $orange-hover;
+                }
+			}
+
+            .login{
+                display: flex;
+                gap: 0.5rem;
+                align-items: center;
+                justify-content: center;
+            }
+		}
+        }
+	}
+}

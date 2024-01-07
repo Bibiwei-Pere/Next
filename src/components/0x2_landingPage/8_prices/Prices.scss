@@ -1,0 +1,209 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.prices {
+		max-width: 2000px;
+		width: 100%;
+		margin: auto;
+		padding: 5rem 5rem 8rem;
+		position: relative;
+		@include md{
+			padding: 2rem 20px 6rem;
+		}
+
+    .wrapper{		
+        display: grid;
+        grid-template-columns: 36rem auto;
+        justify-content: space-between;
+		@include xl{
+			grid-template-columns: 1fr;
+			gap: 4rem;
+		}
+        div{
+            display: flex;
+            justify-content: right;
+            align-items: center; 
+            gap: 1.5rem; 
+			@include md{
+				justify-content: start;
+			}
+            button{
+                padding: 0.7rem 1.4rem;
+                color: $orange;
+                background-color: transparent;
+                font-size: 1.2rem;
+                font-weight: bold;
+                border-radius: 0.5rem;
+                border: 2px solid $orange;
+				@include md{
+					padding: 0.5rem 1rem;
+					border: 1px solid $orange;
+				}
+                &:hover{
+                    background-color: transparent;
+                    color: $white;
+                }
+                &.active{
+                    background-color: $orange;
+                    color: $white;
+                }
+
+            }
+        }
+    }
+
+	.packages {
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+		gap: 2rem;
+        margin-top: 5rem;
+        justify-content: center;
+        position: relative;
+		@include xl{
+			grid-template-columns: repeat(2, auto);
+			row-gap: 3rem;
+		}
+		@include lg{
+			grid-template-columns: 30rem;
+			row-gap: 4rem;
+		}
+		@include md{
+			grid-template-columns: 25rem;
+			gap: 4rem;
+		}
+		@include sm{
+			grid-template-columns: 1fr;
+			gap: 4rem;
+		}
+		.package {
+			padding: 2.8rem 2rem 2.5rem;
+            border-radius: 1rem;
+			box-shadow: 2px 2px 2px 2px $orange;
+			display: flex;
+			flex-direction: column;
+			@include xxl{
+				position: relative;
+				padding: 1.5rem 0;
+			}
+            .popular{
+                        display: block;
+                        background-color: $orange;
+                        position: absolute;
+                        top: -1.2rem;
+                        padding: 0.5rem 1.2rem;
+                        color: $white;
+                        border-radius: 0.5rem;
+						@include xxl{
+							left: 1rem;
+							padding: 0.5rem;
+						}
+                }
+            &:nth-child(2){
+                background: $gradient3;
+                .amount{
+                    span{
+                        background-color: $orange;
+                        color: $white;
+                    }
+                }
+                .number{
+                    background: $orange;
+                    color: $white;
+                }
+                .btn{
+                    background: $orange;
+                    color: $white;
+					@include xxl{
+						max-width: 300px;
+						width: 100%;
+						margin: auto;
+					}
+                    &:hover{
+                        background: $light-gray2;
+                        color: $black;
+                    }
+                }
+            }
+            .text{
+                padding: 0 2rem;
+                h4{
+                    font-size: 1.5rem;
+                }
+                p{
+                    margin: 0 0 1.5rem;
+                }
+            }
+
+            .amount{
+                background-color: $light-gray1;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 2rem;
+                h2{
+                    display: flex;
+                    gap: 3px;
+                    color: $black;
+                }
+                span{
+                    background-color: $white;
+                    padding: 7px 20px;
+                    border-radius: 4rem;
+                }
+            }
+
+            .container{
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+                padding: 2rem 1.5rem;
+                .box{
+                    display: grid;
+                    grid-template-columns: 2.5rem auto;
+                    gap: 1.2rem;
+                    .number{
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: bold;
+                        height: 2.5rem;
+                        border: 1px solid;
+
+                    }
+
+                    span{
+                        display: flex;
+                        flex-direction: column;
+                        h4{
+                            line-height: 1.2rem;
+                        }
+                        p{
+                            margin: 0;
+                            padding-top: 0.5rem;
+                        }
+                    }
+                }
+            }
+
+	.btn {
+		font-size: 1.1rem;
+		border-radius: 7px;
+		padding: 1.2rem 15px;
+		background: $light-gray1;
+        font-weight: bold;
+        text-align: center;
+					@include xxl{
+						max-width: 300px;
+						width: 100%;
+						margin: auto;
+					}
+		&:hover {
+			cursor: pointer;
+			background: $orange;
+			color: $white;
+		}
+	}
+		}
+	}
+}

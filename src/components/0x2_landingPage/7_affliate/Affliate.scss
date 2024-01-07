@@ -1,0 +1,64 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.affliate {		
+	max-width: 2000px;
+	width: 100%;
+	margin: 5rem auto;
+	padding: 2rem 5rem;
+	position: relative;
+	display: grid;
+	grid-template-columns: auto 30rem;
+	gap: 7rem;
+	@include md{
+		grid-template-columns: 1fr;
+		padding: 0 20px;
+		margin: 4rem 0 3rem;
+		gap: 4rem;
+		h2{
+			margin-bottom: 1.5rem;
+		}
+		p{
+			margin-top: 0;
+		}
+	}
+
+	.btn {
+		width: 7.5rem;
+		border: 2px solid $orange;
+		font-size: 1.1rem;
+		border-radius: 7px;
+		padding: 7px 15px;
+		background: $orange;
+		color: $white;
+		margin-top: 3rem;
+		&:hover {
+			cursor: pointer;
+			background: transparent;
+			color: $dark-blue;
+		}
+	}
+
+	.box {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		justify-content: center;
+		align-items: center;
+		@include md{
+			gap: 1rem;
+			p{
+				margin-top: 0.5rem;
+			}
+		}
+		@include sm{
+			grid-template-columns: 10rem;
+			row-gap: 1.5rem;
+		}
+		span {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+			text-align: center;
+		}
+	}
+}
