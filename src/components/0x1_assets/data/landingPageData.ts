@@ -21,8 +21,8 @@ import Payments from "@mui/icons-material/LocalAtm";
 import Resolution from "@mui/icons-material/CreditScore";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import LinkedinIcon from "@mui/icons-material/Linkedin";
-import YoutubeIcon from "@mui/icons-material/Youtube";
+import LinkedinIcon from "@mui/icons-material/LinkedIn";
+import YoutubeIcon from "@mui/icons-material/YouTube";
 
 export const goalDetails = [
 	{
