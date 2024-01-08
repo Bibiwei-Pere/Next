@@ -41,4 +41,4 @@ Run `npm run build`
 
 ### License
 
-Invester is released under the MIT License.
+Next is released under the MIT License.
