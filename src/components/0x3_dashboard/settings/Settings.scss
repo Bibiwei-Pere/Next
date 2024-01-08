@@ -116,11 +116,6 @@
 							line-height: 1rem;
 							}
 						}
-							.dots{
-								@include sm{
-									display: none;
-								}
-							}
 
 						input{
 							outline: none;

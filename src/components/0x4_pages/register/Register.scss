@@ -117,6 +117,9 @@
                         outline: none;
                         border: 2px solid $gray;
                         border-radius: 5px;
+						@include sm{
+							font-size: 0.9rem;
+						}
                         &:focus{
                             //border-bottom: 2.5px solid $dark-blue;
                         }
