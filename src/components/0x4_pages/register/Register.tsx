@@ -9,6 +9,7 @@ import Country from "@mui/icons-material/Public";
 import Password from "@mui/icons-material/Lock";
 import User from "@mui/icons-material/AccountCircle";
 import Lottie from "lottie-react";
+import signUp from "../../../components/0x1_assets/svgAnimations/login2.json";
 import Logo from "../../0x2_landingPage/0_component/logo/Logo";
 import Success2 from "../../0x3_dashboard/component/success/Success2";
 
@@ -203,6 +204,7 @@ const Register = () => {
 							<span>
 								<Logo />
 							</span>
+							<Lottie animationData={signUp} loop={true} />
 						</div>
 					</div>
 					{processing ? (
