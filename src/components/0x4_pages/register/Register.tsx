@@ -31,6 +31,8 @@ const Register = () => {
 	const [confirmPassword, confirmPasswordChange] = useState("");
 	const [success, setSuccess] = useState(false);
 	const [processing, setProcessing] = useState(false);
+	const walletBalance = 50.0;
+	const referralBalance = 0.0;
 	const notifications = [
 		{
 			id: 1,
@@ -50,7 +52,7 @@ const Register = () => {
 		},
 		{
 			id: 3,
-			title: "Deposit - $50",
+			title: "Deposit - $50.00",
 			message: "A welcome bonus of $50 has been deposited in your wallet",
 			date: new Date().toLocaleDateString(),
 			author: "Kelly - PRO",
@@ -62,7 +64,7 @@ const Register = () => {
 		e.preventDefault();
 		if (isValidate()) {
 			setProcessing(true);
-			let regobj = { id, firstName, lastName, email, phone, password, btcAddress: "", ethAddress: "", usdtAddress: "", transactions: [], tickets: [], notifications };
+			let regobj = { id, firstName, lastName, email, phone, password, btcAddress: "", ethAddress: "", usdtAddress: "", walletBalance, referralBalance, transactions: [], tickets: [], notifications };
 
 			fetch(" https://next-api-7kot.onrender.com/users/", {
 				method: "POST",

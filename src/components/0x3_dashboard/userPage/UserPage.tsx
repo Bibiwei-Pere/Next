@@ -105,7 +105,7 @@ const UserPage = () => {
 									<Dots />
 								</div>
 							</div>
-							<h1>$ {walletBalance.toFixed(2)}</h1>
+							<h1>$ {walletBalance}</h1>
 							<Link to="/dashboard/orders" style={{ color: "#f3603c" }} className="btn">
 								Deposit now
 							</Link>
@@ -121,7 +121,7 @@ const UserPage = () => {
 									<Dots />
 								</div>
 							</div>
-							<h1>$ {referralBalance.toFixed(2)}</h1>
+							<h1>$ {referralBalance}</h1>
 							<Link to="/dashboard/orders" style={{ color: "green" }} className="btn">
 								Referral Balance
 							</Link>
