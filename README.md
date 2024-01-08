@@ -4,7 +4,7 @@ Investment platform were users can create an account, deposit, make orders, with
 
 ### Screenshot
 
-<img src="/public/preview.jpg" />
+<img src="/public/preview.png" />
 
 ### Links
 
@@ -28,3 +28,17 @@ Investment platform were users can create an account, deposit, make orders, with
 
 - Website - [Bibiwei Pere](https://perebibiwei.netlify.app)
 - Twitter - [@Bibiwei_Pere](https://www.twitter.com/Bibiwei_Pere)
+
+### Installation
+Clone this repository to your local machine.
+#### Usage
+1. Install the necessary dependencies by running `npm install`.  
+2. Start the application by running `npm run dev`.  
+3. Access the application by navigating to http://localhost:5173 in your browser.
+4. Customize your website by adding and removing pages and lots more.
+#### Build
+Run `npm run build`
+
+### License
+
+Invester is released under the MIT License.
