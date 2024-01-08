@@ -19,6 +19,9 @@
 			display: flex;
 			flex-direction: column;
 			border: 1px solid $light-gray2;
+			@include sm{
+				overflow-x: scroll;
+			}
 			&:nth-child(1){
 				grid-column: span 1;
 				grid-row: span 2;
@@ -33,6 +36,7 @@
 				background-color: $light-gray;
 				padding: 0.5rem 2rem;
 				@include sm{
+					padding: 15px;
 					flex-direction: column;
 				}
 			}
@@ -40,7 +44,7 @@
 			.wrapper{
 				padding: 2rem;
 				@include sm{
-					padding: 20px;
+					padding: 15px;
 				}
 				img{
 					width: 6rem;

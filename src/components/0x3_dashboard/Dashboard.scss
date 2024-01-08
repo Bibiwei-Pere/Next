@@ -33,6 +33,9 @@
 	@include md {
 		padding: 16px;
 	}
+	@include sm {
+		padding: 12px;
+	}
 }
 .content{
 	margin-top: 5rem;

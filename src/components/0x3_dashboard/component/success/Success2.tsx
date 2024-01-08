@@ -13,7 +13,7 @@ const Success2 = ({ title, description, btn1, btn1Url }: Props) => {
 	return (
 		<div className="success">
 			<div className="container">
-				<div className="lottie">
+				<div className="lotties">
 					<Lottie animationData={success2} loop={true} />
 				</div>
 				<div>

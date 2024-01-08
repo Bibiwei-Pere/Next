@@ -10,6 +10,8 @@ import User from "@mui/icons-material/AccountCircle";
 const Login = () => {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
+	const [processing, setProcessing] = useState(false);
+
 	const navigate = useNavigate();
 
 	const ProceedLogin = (e: React.FormEvent<HTMLFormElement>) => {
@@ -48,6 +50,7 @@ const Login = () => {
 	};
 
 	const isValidate = () => {
+		setProcessing(true);
 		let result = true;
 		if (username === "" || username === null) {
 			result = false;
@@ -109,6 +112,13 @@ const Login = () => {
 							<Lottie animationData={login} loop={true} />
 						</div>
 					</div>
+					{processing ? (
+						<div className="loading">
+							<div className="processing-circle"></div>
+						</div>
+					) : (
+						""
+					)}
 				</div>
 			</div>
 		</div>

@@ -1,10 +1,14 @@
 @import "../../../../styles/variables.scss";
+@import "../../../../styles/responsive.scss";
 
 .transactions {
 	.dataGrid {
 		background: $white;
 		margin-top: 1rem;
 		padding: 20px;
+		@include sm{
+		padding: 10px 20px;
+		}
 
 		.MuiDataGrid-toolbarContainer {
 			flex-direction: row-reverse;

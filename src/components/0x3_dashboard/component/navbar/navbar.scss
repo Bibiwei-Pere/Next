@@ -18,6 +18,9 @@
 		width: auto;
 		z-index: 20;
 	}
+	@include sm{
+		padding: 15px 12px 8px;
+	}
 
 	.logo_container{
 		display: none;

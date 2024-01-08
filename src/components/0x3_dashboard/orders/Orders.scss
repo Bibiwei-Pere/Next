@@ -6,7 +6,8 @@
 	grid-template-columns: 1042px auto;
 	gap: 5rem;
 	@include sm{
-		grid-template-columns: auto;
+		grid-template-columns: 100%;
+		margin-bottom: 5rem;
 	}
 	.container {
 	padding: 1rem 0rem;
@@ -21,6 +22,10 @@
 			width: 100%;
 		}
 		span{
+			display: flex;
+			justify-content: center;
+			gap: 0;
+			align-items: center;
 			.btn{
 				display: flex;
 				text-align: center;

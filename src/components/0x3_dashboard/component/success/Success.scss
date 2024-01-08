@@ -1,4 +1,5 @@
-@import "../../../../styles//variables.scss";
+@import "../../../../styles/variables.scss";
+@import "../../../../styles/responsive.scss";
 
 .success{
 	display: flex;
@@ -11,17 +12,23 @@
 	background: rgba(0, 0, 0, 0.6);
 	right: 0;
 	bottom: 0;
+	overflow-y: scroll;
+	padding: 5rem 0;
 	.container{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 4rem;
+		gap: 0rem;
 		max-width: 700px;
 		background-color: $white;
 		color: $dark-blue;
 		text-align: center;
 		padding: 0 6rem 4rem;
 		border-radius: 10px;
+		@include md{
+			max-width: 500px;
+			padding: 0 12px 3rem;
+		}
 		div{
 		h4{
 			font-size: 1.6rem;
@@ -31,14 +38,22 @@
 			max-width: 360px;
 		}
 	}
-		.lottie{
-			max-width: 300px;
+		.lotties{
+			max-width: 200px;
 			height: 200px;
 			width: 100%;
+			@include sm{
+				max-width: 140px;
+				height: 140px;
+			}
 		}
 		span{
 			display: flex;
 			gap: 1.2rem;
+			margin-top: 2.5rem;
+			@include sm{
+				margin-top: 1.5rem;
+			}
 			.btn1{
 				padding: 0.8rem 4rem;
 				font-weight: bold;

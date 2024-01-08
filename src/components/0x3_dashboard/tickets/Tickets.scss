@@ -15,6 +15,9 @@
 				display: grid;
                 gap: 3rem;
                 grid-template-columns: repeat(1, 100%) !important;
+				@include sm{
+					gap: 2.4rem;
+				}
                 div {
                     position: relative;
                     input, textarea {

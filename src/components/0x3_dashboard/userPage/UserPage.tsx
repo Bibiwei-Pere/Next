@@ -87,16 +87,16 @@ const UserPage = () => {
 	return (
 		<div>
 			<div className="user_container">
-				<h3>Welcome back, {username}!</h3>
+				<h2>Welcome back, {username}!</h2>
 				<span>Take a look at our updated dashboard</span>
 			</div>
 
 			<div className="userPage">
-				{isError ? "Failed to Fetch data. Please refresh" : ""}
-				<div className="container container1">
+				{isError ? <div className="container7">Failed to Fetch data. Please refresh</div> : ""}
+				<div className="containers containers1">
 					<Chart />
 				</div>
-				<div className="container container2">
+				<div className="containers containers2">
 					<div className="walletBalance">
 						<div className="boxInfo">
 							<div className="title">
@@ -112,11 +112,11 @@ const UserPage = () => {
 						</div>
 					</div>
 				</div>
-				<div className="container container3">
+				<div className="containers containers3">
 					<div className="walletBalance">
 						<div className="boxInfo">
 							<div className="title">
-								<h4>Profit Balance</h4>
+								<h4>Referral Balance</h4>
 								<div className="dots">
 									<Dots />
 								</div>
@@ -128,11 +128,11 @@ const UserPage = () => {
 						</div>
 					</div>
 				</div>
-				<div className="container container4">
+				<div className="containers containers4">
 					<SmallChart />
 				</div>
-				<div className="container container5">{isLoading ? "Loading..." : <Transactions columns={columns} rows={transactions} />}</div>
-				<div className="container6">
+				<div className="containers containers5">{isLoading ? "Loading..." : <Transactions columns={columns} rows={transactions} />}</div>
+				<div className="containers6">
 					<MobileScreen rows={transactions} />
 				</div>
 			</div>

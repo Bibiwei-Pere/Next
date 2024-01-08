@@ -9,9 +9,13 @@
 	}
 	@include sm{
 		color: $hero-color;
-		h3{
-		font-size: 1.5rem;
+		h2{
+		font-size: 1.3rem;
 		color: $dark-blue;
+			line-height: 1.2rem;
+		}
+		span{
+			font-size: 0.81rem;
 		}
 	}
 }
@@ -36,7 +40,7 @@
 		grid-auto-rows: auto;
 	}
 
-	.container {
+	.containers {
 		padding: 20px;
 		border-radius: 10px;
 		max-width: 100%;
@@ -44,7 +48,7 @@
 		background-color: $white;
 		@include sm {
 			border: none;
-			padding: 12px;
+			padding: 0;
 			width: 100%;
 			.dots{
 				display: none;
@@ -79,7 +83,6 @@
 	color: $dark-blue;
 
 	.boxInfo {
-		flex: 3;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -90,6 +93,8 @@
 			padding: 0;
 			h4{
 				line-height: 1rem;
+				font-size: 0.85rem;
+				margin-top: 5px;
 			}
 		}
 
@@ -97,6 +102,9 @@
 			font-size: 30px;
 			@include md {
 				font-size: 25px;
+			}
+			@include sm {
+				line-height: 1.5rem;
 			}
 		}
 		.btn {
@@ -108,7 +116,7 @@
 }
 	}
 
-	.container1 {
+	.containers1 {
         background: $black;
 		color: $white;
 		grid-column: span 3;
@@ -117,7 +125,7 @@
 		display: none;
 		}
 	}
-	.container2 {
+	.containers2 {
         background: $light-gray;
 		grid-column: span 1;
 		grid-row: span 1;
@@ -125,7 +133,7 @@
 			grid-row: 1;
 		}
 	}
-	.container3 {
+	.containers3 {
 		grid-column: span 1;
 		grid-row: span 1;
 		@include xl{
@@ -135,7 +143,7 @@
 			grid-row: 1;
 		}
 	}
-	.container4 {
+	.containers4 {
 		grid-column: span 1;
 		grid-row: span 1;
 		@include xl {
@@ -146,7 +154,7 @@
 			display: none;
 		}
 	}
-	.container5 {
+	.containers5 {
 		grid-column: span 3;
 		grid-row: span 1;
 		overflow-x: scroll;
@@ -154,12 +162,21 @@
 			display: none;
 		}
 	}
-	.container6 {
+	.containers6 {
 		display: none;
 		@include sm {
 			grid-column: span 2;
 			grid-row: span 2;
 			display: block;
+		}
+	}
+	.container7 {
+		display: none;
+		@include sm {
+			grid-column: span 2;
+			grid-row: span 2;
+			display: block;
+
 		}
 	}
 }

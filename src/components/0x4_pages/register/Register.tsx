@@ -30,6 +30,7 @@ const Register = () => {
 	const [password, passwordChange] = useState("");
 	const [confirmPassword, confirmPasswordChange] = useState("");
 	const [success, setSuccess] = useState(false);
+	const [processing, setProcessing] = useState(false);
 	const notifications = [
 		{
 			id: 1,
@@ -60,6 +61,7 @@ const Register = () => {
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		if (isValidate()) {
+			setProcessing(true);
 			let regobj = { id, firstName, lastName, email, phone, password, btcAddress: "", ethAddress: "", usdtAddress: "", transactions: [], tickets: [], notifications };
 
 			fetch(" https://next-api-7kot.onrender.com/users/", {
@@ -206,6 +208,13 @@ const Register = () => {
 							<Lottie animationData={signUp} loop={true} />
 						</div>
 					</div>
+					{processing ? (
+						<div className="loading">
+							<div className="processing-circle"></div>
+						</div>
+					) : (
+						""
+					)}
 				</div>
 			</div>
 		</div>

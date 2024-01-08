@@ -1,4 +1,5 @@
 @import "../../../../styles/variables.scss";
+@import "../../../../styles/responsive.scss";
 
 .createOrder{
 	.header{
@@ -9,22 +10,41 @@
 		color: $black;
 		position: relative;
 		margin-bottom: 2rem;
+		font-size: 0px;
 		h2{
 			font-size: 1.4rem;
 		}
+		@include sm{
+			gap: 10px;
+			h2{
+				font-size: 1.1rem;
+				line-height: 1.1rem;
+			}
+		}
+
 	}
 		
 	.container{
 		display: grid;
 		gap: 20px;
 		position: relative;
-
+		@include sm{
+			gap: 0;
+		}
 		.wrapper{
 			max-width: 800px;
 			width: 100%;
 			border-radius: 5px;
 			margin-left: 12rem;
 			position: relative;
+			@include lg{
+				margin-left: 0;
+				padding-left: 4rem;
+			}
+			@include sm{
+				margin-left: 0;
+				padding-left: 0;
+			}
 			span{
 				display: flex;
 				justify-content: space-between;
@@ -49,22 +69,6 @@
 						border: 1px solid red;
 					}
 				}
-/*
-				select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: url('path_to_arrow_icon') no-repeat right;
-  padding-right: 20px;
-}
-
-select option {
-  padding-left: 20px;
-  background-image: url('path_to_image_for_option');
-  background-size: 16px;
-  background-repeat: no-repeat;
-}
-*/
 				.address{
 					display: flex;
 					flex-direction: column;
@@ -117,6 +121,12 @@ select option {
 			position: absolute;
 			left: -6.2rem;
 			top: 1rem;
+			@include lg{
+				left: 18px;
+			}
+			@include sm{
+				display: none;
+			}
 		}
 		
 			.circle{
@@ -131,6 +141,15 @@ select option {
 				position: absolute;
 				color: $white;
 				font-weight: bold;
+				@include lg{
+					width: 2.3rem;
+					height: 2.3rem;
+					left: 0;
+					font-size: 1.2rem;
+				}
+				@include sm{
+					display: none;
+				}
 			}
 		}
 		

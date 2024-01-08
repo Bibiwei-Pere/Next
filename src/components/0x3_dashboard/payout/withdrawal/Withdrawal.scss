@@ -1,4 +1,5 @@
 @import "../../../../styles/variables.scss";
+@import "../../../../styles/responsive.scss";
 
 .withdrawal{
 	.header{
@@ -25,6 +26,14 @@
 			border-radius: 5px;
 			margin-left: 12rem;
 			position: relative;
+			@include lg{
+				margin-left: 0;
+				padding-left: 4rem;
+			}
+			@include sm{
+				margin-left: 0;
+				padding-left: 0;
+			}
 			span{
 				display: flex;
 				justify-content: space-between;
@@ -100,6 +109,12 @@
 			position: absolute;
 			left: -6.2rem;
 			top: 1rem;
+			@include lg{
+				left: 18px;
+			}
+			@include sm{
+				display: none;
+			}
 		}
 		
 			.circle{
@@ -114,6 +129,15 @@
 				position: absolute;
 				color: $white;
 				font-weight: bold;
+				@include lg{
+					width: 2.3rem;
+					height: 2.3rem;
+					left: 0;
+					font-size: 1.2rem;
+				}
+				@include sm{
+					display: none;
+				}
 			}
 		}
 		
