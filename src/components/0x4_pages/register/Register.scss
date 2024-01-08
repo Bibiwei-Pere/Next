@@ -120,9 +120,6 @@
 						@include sm{
 							font-size: 0.9rem;
 						}
-                        &:focus{
-                            //border-bottom: 2.5px solid $dark-blue;
-                        }
                         &.filled {
                             + label {
                                 transform: translateY(-2rem);
@@ -139,6 +136,9 @@
                             font-size: 1rem;
                             transition: all 0.2s ease-out;
                             pointer-events: none;
+							@include sm{
+								font-size: 0.9rem;
+							}
                         }
                         span{
                             position: absolute;
@@ -179,7 +179,7 @@
                         -moz-appearance: none;
                         width: 20px;
                         height: 20px;
-                        border: 2px solid $dark-blue; /* Replace #000 with your preferred color */
+                        border: 2px solid $dark-blue;
                         border-radius: 3px;
                         outline: none;
                         transition: border-color 0.3s;
@@ -190,7 +190,7 @@
                             width: 13px;
                             height: 13px;
                             margin: 2px;
-                            background-color: $dark-blue; /* Replace #000 with your preferred color */
+                            background-color: $dark-blue;
                             border-radius: 2px;
                             transition: background-color 0.3s;
                             opacity: 0;

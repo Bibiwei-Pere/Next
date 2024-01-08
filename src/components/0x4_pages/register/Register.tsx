@@ -72,6 +72,7 @@ const Register = () => {
 				body: JSON.stringify(regobj),
 			})
 				.then(() => {
+					setProcessing(false);
 					setSuccess(true);
 				})
 				.catch((err) => {
