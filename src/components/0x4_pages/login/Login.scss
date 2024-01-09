@@ -22,9 +22,6 @@
                 width: 27rem;
                 grid-template-columns: repeat(1, 100%) !important;
 				@include md{
-					width: 20rem;
-				}
-				@include sm{
 					width: 100%;
 				}
                 div {
