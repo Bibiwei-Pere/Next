@@ -5,6 +5,7 @@ Investment platform were users can create an account, deposit, make orders, with
 ### Screenshot
 #### Landing page
 <img src="/public/preview1.png" />
+
 #### Dashboard
 <img src="/public/preview.png" />
 
