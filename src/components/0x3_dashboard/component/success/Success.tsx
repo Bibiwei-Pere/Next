@@ -14,7 +14,7 @@ interface Props {
 const Success = ({ title, description, btn1, btn1Url, btn2, btn2Url }: Props) => {
 	return (
 		<div className="success">
-			<div className="successContainer">
+			<div className="container">
 				<div className="lotties">
 					<Lottie animationData={success} loop={true} />
 				</div>

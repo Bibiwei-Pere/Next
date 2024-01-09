@@ -14,13 +14,13 @@
 	bottom: 0;
 	overflow-y: scroll;
 	padding: 5rem 0;
-	.successContainer{
+	.container{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: 0rem;
 		max-width: 700px;
-		background-color: $white;
+		background: $white !important;
 		color: $dark-blue;
 		text-align: center;
 		padding: 0 6rem 4rem;
