@@ -2,10 +2,8 @@ MIT License
 
 Copyright (c) 2024 Bibiwei Pere
 
-### Author
-
-- Website - [Bibiwei Pere](https://perebibiwei.netlify.app)
-- Twitter - [@Bibiwei_Pere](https://www.twitter.com/Bibiwei_Pere)
+- Website - https://perebibiwei.netlify.app
+- Twitter - https://www.twitter.com/Bibiwei_Pere
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
