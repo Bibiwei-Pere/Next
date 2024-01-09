@@ -124,7 +124,6 @@ const Register = () => {
 							<h3>Start Signup for free</h3>
 							<p>Create an account to start using our product</p>
 							{success && <Success2 {...registerSuccessData} />}
-							<Success2 {...registerSuccessData} />
 							<form onSubmit={handleSubmit}>
 								<div className="item">
 									<div>
