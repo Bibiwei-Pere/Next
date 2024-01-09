@@ -3,7 +3,7 @@
 Investment platform were users can create an account, deposit, make orders, withdraw as well as update their profile settings. Users can also send ticket to admin
 
 ### Screenshot
-
+<img src="/public/preview1.png" />
 <img src="/public/preview.png" />
 
 ### Links
