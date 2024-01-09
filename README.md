@@ -2,16 +2,16 @@
 
 Investment platform were users can create an account, deposit, make orders, withdraw as well as update their profile settings. Users can also send ticket to admin
 
+### Links
+
+-[Live site URL](https://nextinvest0.netlify.app)
+
 ### Screenshot
 #### Landing page
 <img src="/public/preview1.png" />
 
 #### Dashboard
 <img src="/public/preview.png" />
-
-### Links
-
--[Live site URL](https://nextinvest0.netlify.app)
 
 ### Components
 
