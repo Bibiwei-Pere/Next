@@ -4,7 +4,7 @@ Investment platform were users can create an account, deposit, make orders, with
 
 ### Links
 
--[Live site URL](https://nextinvest0.netlify.app)
+-[Live site URL](https://next2-0.vercel.app)
 
 ### Screenshot
 #### Landing page
